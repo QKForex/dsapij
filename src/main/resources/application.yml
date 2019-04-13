@@ -1,0 +1,32 @@
+server:
+  port: 80
+  address: 192.168.10.144
+DServer:
+   domain: QKForex
+   user: dsadm
+   password: dsadm
+   server: QKForex
+   defaultproject: DataClick
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/student
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  rabbitmq:
+    addresses: 192.168.10.144
+    port: 5672
+    username: mq
+    password: 123456
+    virtual-host: /
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 2
+          initial-interval:
+    publisher-confirms: true
+    publisher-returns: true
+  main:
+    allow-bean-definition-overriding: true

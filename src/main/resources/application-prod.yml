@@ -1,0 +1,16 @@
+server:
+  port: 80
+  address: 192.168.10.144
+DServer:
+   domain: QKForex
+   user: dsadm
+   password: dsadm
+   server: QKForex
+   defaultproject: DataClick
+spring:
+  rabbitmq:
+    addresses: 192.168.10.144
+    port: 5672
+    username: mq
+    password: 123456
+    virtual-host: /
